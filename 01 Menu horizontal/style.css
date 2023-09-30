@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Caracterisitcas de la imagen boton*/
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+/*Se esconde los links del mobile*/
+.links {
+    display: none;
+}
+
+/*Aparecen los links del mobile*/
+.expanded {
+    display: block;
+}
+
+/*nav .desktop .secondary.mini .more{
+    margin-right: 0px;
+}*/
+
+nav .mobile .links .submenu {
+    background-color: black;
+    position: absolute;
+    width: auto;
+    left: 0;
+}
+
+/*Caracteristicas del nav*/
+nav {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+nav .mobile {
+    display: none;
+}
+
+nav .mobile .links {
+    background-color: transparent;
+}
+
+nav .mobile .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav .logo {
+    /*Al menos debe medir 250*/
+    min-width: 250px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav a:hover {
+    color: black;
+    background-color: rgb(122, 157, 77);
+    width: auto;
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+    display: flex;
+}
+
+nav .desktop .secondary.mini {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    nav .logo {
+        min-width: 100px;
+    }
+
+    nav .secondary.full {
+        display: none;
+    }
+
+    nav .secondary.mini {
+        display: block !important;
+    }
+
+    nav .secondary.mini .submenu {
+        background-color: black;
+        position: absolute;
+        display: none;
+        width: 150px;
+        right: 0;
+    }
+
+    nav .secondary.mini:hover .submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    nav .desktop {
+        display: none;
+    }
+
+    nav .mobile {
+        display: block;
+    }
+}
