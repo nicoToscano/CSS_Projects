@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #d3ccbe;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+/*Nombre del buscador*/
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.name .h1-name {
+    font-size: 100px;
+    color: #07073f;
+}
+
+.search-bar {
+    border: solid 1px #ccc;
+    border-radius: 30px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 15px;
+    margin: 1px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Para cambiar el color cuando se selccione*/
+.search-bar:focus-within {
+    border: solid 1px black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+
+    font-size: 18px;
+}
+
+.search-bar .actions {
+    display: flex;
+    gap: 5px;
+}
+
+.search-bar .actions button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+
+    transition: color 0.3s ease-in-out;
+}
+
+.search-bar .actions button:hover {
+    color: black;
+}
