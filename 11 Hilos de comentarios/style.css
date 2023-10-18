@@ -1,0 +1,121 @@
+/*Variable global*/
+:root {
+    --border-color: #558bff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(48, 48, 84);
+}
+
+/*Estilos de todo el contenedor*/
+.comments-container {
+    width: 800px;
+    margin: 100px auto;
+    color: white;
+}
+
+/* > Este estilo solo se va a ejecutar con los elementos que son hijos inmediatos de comment container
+y sean de clase comment*/
+.comments-container>.comment {
+    margin-bottom: 10px;
+}
+
+/*Estilo de todos los comentarios*/
+.comments-container .comment {
+    display: flex;
+}
+
+/*Estilo del contenedor entre la linea y el comentario secundario*/
+.comments-container .comment .line {
+    position: relative;
+    width: 10px;
+    height: 50%;
+    border-left: solid 1px var(--border-color);
+    border-bottom: solid 1px var(--border-color);
+    border-radius: 0 0 0 8px;
+}
+
+/*Estilo de contenedor de comentario principal y secundarios*/
+.comments-container .comment .comment-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Estilo de un solo comentario*/
+.comments-container .comment .comment-wrapper .content {
+    width: 100%;
+    display: flex;
+    border: solid 1px var(--border-color);
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgb(24, 43, 80);
+}
+
+/*Estilo de la imagen*/
+.comments-container .comment .comment-wrapper .content img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+/*Estilo de la informacion del comentario*/
+.comments-container .comment .comment-wrapper .content .comment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Estilo del nombre de usuario*/
+.comments-container .comment .comment-wrapper .content .comment-info .header .username {
+    font-weight: bold;
+}
+
+/*Estilo del tiempo*/
+.comments-container .comment .comment-wrapper .content .comment-info .header .date {
+    color: #999;
+}
+
+/*Estilos de las acciones*/
+.comments-container .comment .comment-wrapper .content .comment-info .actions {
+    display: flex;
+    gap: 5px;
+}
+
+/*Estilo de los botones*/
+.comments-container .comment .comment-wrapper .content .comment-info .actions button {
+    border: none;
+    background-color: transparent;
+    color: var(--border-color);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/*Estilo hover de los botones*/
+.comments-container .comment .comment-wrapper .content .comment-info .actions button:hover {
+    color: white;
+    background-color: var(--border-color);
+}
+
+/*Estilo de todos los comentarios secundarios*/
+.comments-container .comment .replies {
+    padding-top: 10px;
+    position: relative;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Estilo de la linea de los comentarios secundarios*/
+.comments-container .comment .replies::before {
+    content: "";
+    position: absolute;
+    background-color: var(--border-color);
+    width: 1px;
+    top: 0;
+    height: calc(100% - 60px);
+}
