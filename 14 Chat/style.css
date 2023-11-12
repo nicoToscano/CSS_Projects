@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100vh;
+    background-color: #233f52;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 30px;
+}
+
+.chat-container .bubble-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat-container .bubble-container.left {
+    width: 50%;
+    margin-right: auto;
+}
+
+.chat-container .bubble-container.right {
+    width: 50%;
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.chat-container .bubble-container .bubble-text {
+    color: white;
+
+}
+
+/* > es la primera capa div*/
+.chat-container .bubble-container.right .bubble .bubble-text>div {
+    position: relative;
+    background-color: #005c4b;
+}
+
+.chat-container .bubble-container.left .bubble .bubble-text>div {
+    position: relative;
+    background-color: #202c33;
+    display: inline-flex;
+}
+
+.chat-container .bubble-container .bubble .bubble-text>div {
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: auto;
+}
+
+.chat-container .bubble-container .bubble .bubble-text .bubble-info {
+    font-size: 12px;
+    color: rgb(255, 255, 255, 0.7);
+    padding: 0 10px;
+    text-align: right;
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    box-sizing: border-box;
+}
+
+.chat-container .bubble-container.left .bubble:nth-child(1) .bubble-text>div::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: solid 10px #202c33;
+    border-top: solid 10px #202c33;
+    border-left: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    left: -11px;
+    top: 0px;
+}
+
+.chat-container .bubble-container.right .bubble:nth-child(1) .bubble-text>div::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: solid 10px transparent;
+    border-top: solid 10px #005c4b;
+    border-left: solid 10px #005c4b;
+    border-bottom: solid 10px transparent;
+    left: 315px;
+    top: 0px;
+}
